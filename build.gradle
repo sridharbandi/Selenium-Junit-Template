@@ -27,5 +27,8 @@ dependencies {
 }
 
 test {
+    systemProperties System.properties
     dependsOn 'cleanTest'
 }
+
+gradle.startParameter.continueOnFailure = true
