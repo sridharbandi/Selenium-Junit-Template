@@ -2,8 +2,11 @@
 
 To automate [Selenium Webdriver](https://docs.seleniumhq.org/projects/webdriver/) binaries management in runtime am using [webdrivermanager](https://github.com/bonigarcia/webdrivermanager), an excellent library by [Boni García](https://github.com/bonigarcia) 
 
+### How to use?
+Create the Page Objects of your Web application under **_pageobjects_** package and call those Page Objects in your jUnit tests under **_tests_** package (Sample Page Objects, testcase included in this template)
+
 ### How to run?
-Clone or download and issue the below commands in project root directory
+Issue the below commands in project root directory
  
  ##### Gradle
 ```javascript
