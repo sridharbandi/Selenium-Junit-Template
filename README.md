@@ -1,4 +1,4 @@
-## Selenium Junit Template with Gradle or Maven as build tools
+## Selenium Junit Template with Gradle or Maven as build tools to getting started with
 
 To automate [Selenium Webdriver](https://docs.seleniumhq.org/projects/webdriver/) binaries management in runtime am using [webdrivermanager](https://github.com/bonigarcia/webdrivermanager), an excellent library by [Boni García](https://github.com/bonigarcia) 
 

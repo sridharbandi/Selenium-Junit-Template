@@ -8,12 +8,14 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.opera.OperaDriver;
 
+import java.util.concurrent.TimeUnit;
+
 /**
  * Created by Sridhar Bandi on 5/9/18.
  */
 public class DriverFactory {
 
-    public static WebDriver getBrowser(){
+    public static WebDriver getBrowser() {
 
         WebDriver _driver = null;
         String _browserName = System.getProperty("browser", DriverType.CHROME.toString()).toUpperCase();
@@ -40,8 +42,13 @@ public class DriverFactory {
                 WebDriverManager.operadriver().setup();
                 _driver = new OperaDriver();
                 break;
+            default:
+                WebDriverManager.chromedriver().setup();
+                _driver = new ChromeDriver();
+                break;
         }
-
+        _driver.manage().window().maximize();
+        _driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         return _driver;
     }
 }

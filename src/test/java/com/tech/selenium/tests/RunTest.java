@@ -1,8 +1,10 @@
 package com.tech.selenium.tests;
 
 import com.tech.selenium.driverutil.DriverFactory;
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
+import com.tech.selenium.pageobjects.GoogleSearchPage;
+import com.tech.selenium.pageobjects.SearchResultsPage;
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 
@@ -11,20 +13,27 @@ import org.openqa.selenium.WebDriver;
  */
 public class RunTest {
 
-    private static WebDriver driver;
+    private WebDriver driver;
+    GoogleSearchPage googleSearchPage;
+    SearchResultsPage searchResultsPage;
 
-    @BeforeClass
-    public static void setUp(){
+    @Before
+    public void setUp(){
         driver = DriverFactory.getBrowser();
+        googleSearchPage = new GoogleSearchPage(driver);
+        searchResultsPage = new SearchResultsPage(driver);
     }
 
     @Test
     public void exampleTest(){
         //Write your test here
+        googleSearchPage.openURL();
+        googleSearchPage.searchFor("Selenium");
+        searchResultsPage.assertSeleniumPresent();
     }
 
-    @AfterClass
-    public static void tearDown(){
+    @After
+    public void tearDown(){
         driver.quit();
     }
 }
