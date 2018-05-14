@@ -10,11 +10,11 @@ Issue the below commands in project root directory
  
  ##### Gradle
 ```javascript
-gradle test
+./gradlew test
 ```
 By default it runs in Chrome browser, you can specify which browser to use as well
 ```javascript
-gradle test -Dbrowser=firefox
+./gradlew test -Dbrowser=firefox
 ```
 Currently supported browsers are 
 * chrome
