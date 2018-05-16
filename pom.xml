@@ -8,7 +8,7 @@
     <artifactId>selenium-java-template</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <name>Selenium Java Template</name>
+    <name>Selenium Junit Template</name>
 
     <properties>
         <selenium.version>3.12.0</selenium.version>
