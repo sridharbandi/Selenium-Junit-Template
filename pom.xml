@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.tech.selenium</groupId>
-    <artifactId>selenium-java-template</artifactId>
+    <artifactId>selenium-junit-template</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <name>Selenium Junit Template</name>

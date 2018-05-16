@@ -16,6 +16,8 @@ By default it runs in Chrome browser, you can specify which browser to use as we
 ```javascript
 ./gradlew test -Dbrowser=firefox
 ```
+>If you're on Windows replace `./gradlew` with `gradlew.bat`
+
 Currently supported browsers are 
 * chrome
 * firefox
