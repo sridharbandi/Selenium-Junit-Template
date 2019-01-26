@@ -4,12 +4,14 @@ import com.tech.selenium.driverutil.DriverFactory;
 import com.tech.selenium.pageobjects.GoogleSearchPage;
 import com.tech.selenium.pageobjects.SearchResultsPage;
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 
 /**
  * Created by Sridhar Bandi on 5/9/18.
+ * Updated on 26/01/19
  */
 public class RunTest {
 
@@ -29,7 +31,7 @@ public class RunTest {
         //Write your test here
         googleSearchPage.openURL();
         googleSearchPage.searchFor("Selenium");
-        searchResultsPage.assertSeleniumPresent();
+        Assert.assertTrue(searchResultsPage._lnkSelenium.isDisplayed());
     }
 
     @After

@@ -8,12 +8,13 @@ import org.openqa.selenium.support.PageFactory;
 
 /**
  * Created by Sridhar Bandi on 5/9/18.
+ * Updated on 26/01/19
  */
 public class GoogleSearchPage {
 
     private WebDriver _driver = null;
 
-    @FindBy(id = "lst-ib")
+    @FindBy(name = "q")
     WebElement _searchBox;
 
     public GoogleSearchPage(WebDriver driver) {
